@@ -1,0 +1,16 @@
+server:
+  port: 8085
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: kcc
+    password: 1234
+    driver-class-name: oracle.jdbc.OracleDriver
+  sql:
+    init:
+      mode: always   # 항상 실행하도록 설정 (embedded 데이터베이스뿐만 아니라 모든 경우에)
+      # schema 및 data 파일을 프로젝트 시작 시 실행할지 여부를 제어합니다.
+      continue-on-error: false  # true: SQL 실행 중 오류가 발생해도 계속 진행
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.kcc.springtest.domain
