@@ -42,4 +42,9 @@ public class MenuController {
     public ResponseEntity<List<Menu>> getMenus(@PathVariable(value = "id") Long id) {
         return ResponseEntity.ok().body(menuService.findAll(id));
     }
+
+    @GetMapping("/hello")
+    public String hello() {
+        return "hello";
+    }
 }
