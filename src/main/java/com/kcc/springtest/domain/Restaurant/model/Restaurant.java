@@ -31,5 +31,6 @@ public class Restaurant {
     private LocalDateTime updated_at;
 
     private List<Menu> menus;
+    private String abc;
 
 }
